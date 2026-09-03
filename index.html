@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atharva Babhane - B.Tech Electronics & Computer Engineering Student, AI & Software Developer Portfolio">
+  <meta property="og:title" content="Atharva Babhane | Developer Portfolio">
+  <meta property="og:description" content="Futuristic personal portfolio highlighting AI Agents, software development, web engineering, and embedded systems.">
+  <meta property="og:type" content="website">
+  <title>Atharva Babhane | Engineering & AI Portfolio</title>
+  
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen" aria-hidden="true">
+    <div class="loader-content">
+      <h2 class="loader-title">ATHARVA BABHANE</h2>
+      <div class="loader-bar-wrapper">
+        <div class="loader-bar"></div>
+      </div>
+      <p class="loader-subtext">LOADING EXPERIENCE...</p>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
+
+  <!-- Reading Scroll Progress -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-header" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Atharva Babhane Home">
+        ATHARVA<span class="logo-accent">.</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li class="nav-item"><a href="#coding-profiles" class="nav-link">Profiles</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="availability-badge" title="Status">
+          <span class="status-dot"></span>
+          <span class="status-text">Available</span>
+        </div>
+
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+
+        <button class="hamburger-btn" id="hamburger" aria-label="Open Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="particles-container" id="particles-container"></div>
+      <div class="bg-grid-pattern"></div>
+      <div class="ambient-blob blob-1"></div>
+      <div class="ambient-blob blob-2"></div>
+
+      <div class="hero-content-wrapper">
+        <!-- Hero Text -->
+        <div class="hero-text-block reveal-element fade-right">
+          <span class="hero-intro-subtitle">&gt; HELLO, I'M</span>
+          <h1 class="hero-main-title">ATHARVA BABHANE</h1>
+          <h2 class="hero-sub-title">Electronics &amp; Computer Engineering Student</h2>
+          
+          <div class="typing-container">
+            <span class="typing-prefix">I am a </span>
+            <span class="typing-text" id="typing-text"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            I build modern digital experiences, solve challenging programming problems, and explore technologies across AI Agents, Data Science, Full-Stack, and Embedded Systems.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary magnetic-btn">
+              <span>VIEW MY WORK</span>
+            </a>
+            <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn-secondary magnetic-btn">
+              <span>DOWNLOAD RESUME</span>
+            </a>
+          </div>
+
+          <div class="hero-social-links">
+            <a href="https://github.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="GitHub Profile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/atharva-b-122844296" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="mailto:atharvababhane@gmail.com" class="social-icon-link" aria-label="Send Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Profile Showcase -->
+        <div class="hero-profile-block reveal-element fade-left">
+          <div class="profile-3d-stage" id="profile-stage">
+            <div class="profile-outer-orbit"></div>
+            <div class="profile-gradient-ring"></div>
+            <div class="profile-glass-ring"></div>
+            
+            <div class="profile-image-container">
+              <img src="E:\Portfolio\assets\athar123.png" alt="Atharva Babhane" class="profile-img" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'><rect width=\'100%\' height=\'100%\' fill=\'%230a0f1d\'/><text x=\'50%\' y=\'50%\' fill=\'%2300f2fe\' font-size=\'28\' font-family=\'sans-serif\' text-anchor=\'middle\' dominant-baseline=\'middle\'>ATHARVA BABHANE</text></svg>'">
+              <div class="profile-glare"></div>
+            </div>
+
+            <!-- Orbiting Badges -->
+            <div class="floating-badge badge-1">Python</div>
+            <div class="floating-badge badge-2">AI Agents</div>
+            <div class="floating-badge badge-3">C++</div>
+            <div class="floating-badge badge-4">Embedded</div>
+            <div class="floating-badge badge-5">Git &amp; GitHub</div>
+            <div class="floating-badge badge-6">Java</div>
+            <div class="floating-badge badge-7">Web</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About Section">
+        <span>SCROLL TO EXPLORE</span>
+        <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding default-container">
+      <div class="section-header reveal-element fade-up">
+        <span class="section-tag">&lt;OVERVIEW&gt;</span>
+        <h2 class="section-title">ABOUT ME</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-bio-card glass-panel reveal-element fade-right">
+          <p class="bio-text">
+            I am a B.Tech student in <strong>Electronics &amp; Computer Engineering</strong> passionate about building impactful technology through AI, Data Science, and Full-Stack Development.
+          </p>
+          <p class="bio-text">
+            As a Google Student Ambassador, Gemini Certified Student, McKinsey Forward Program participant, and Hacktoberfest super contributor, I combine strong problem-solving with technical execution across embedded systems, software engineering, and open-source ecosystems.
+          </p>
+        </div>
+
+        <div class="about-stats-grid reveal-element fade-left">
+          <div class="stat-card glass-panel" data-counter="500">
+            <span class="stat-number" id="stat-1">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Problems Solved</span>
+          </div>
+          <div class="stat-card glass-panel" data-counter="10">
+            <span class="stat-number" id="stat-2">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-card glass-panel" data-counter="8">
+            <span class="stat-number" id="stat-3">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Core Technologies</span>
+          </div>
+          <div class="stat-card glass-panel" data-counter="4">
+            <span class="stat-number" id="stat-4">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Roles &amp; Leadership</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding default-container">
+      <div class="section-header reveal-element fade-up">
+        <span class="section-tag">&lt;CAPABILITIES&gt;</span>
+        <h2 class="section-title">TECHNICAL SKILLS</h2>
+      </div>
+
+      <div class="skills-wrapper reveal-element fade-up">
+        <div class="skills-grid" id="skills-grid">
+          <!-- Skill Cards rendered dynamically by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Infinite Marquee -->
+    <section class="marquee-section">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>AI AGENTS</span><span class="dot">•</span>
+          <span>PYTHON</span><span class="dot">•</span>
+          <span>EMBEDDED SYSTEMS</span><span class="dot">•</span>
+          <span>PROMPT MASTERY</span><span class="dot">•</span>
+          <span>GIT &amp; GITHUB</span><span class="dot">•</span>
+          <span>FULL STACK</span><span class="dot">•</span>
+          <span>C++</span><span class="dot">•</span>
+          <span>DATA SCIENCE</span><span class="dot">•</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span>AI AGENTS</span><span class="dot">•</span>
+          <span>PYTHON</span><span class="dot">•</span>
+          <span>EMBEDDED SYSTEMS</span><span class="dot">•</span>
+          <span>PROMPT MASTERY</span><span class="dot">•</span>
+          <span>GIT &amp; GITHUB</span><span class="dot">•</span>
+          <span>FULL STACK</span><span class="dot">•</span>
+          <span>C++</span><span class="dot">•</span>
+          <span>DATA SCIENCE</span><span class="dot">•</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding default-container">
+      <div class="section-header reveal-element fade-up">
+        <span class="section-tag">&lt;PORTFOLIO&gt;</span>
+        <h2 class="section-title">FEATURED PROJECTS</h2>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Projects rendered dynamically by JS -->
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding default-container">
+      <div class="section-header reveal-element fade-up">
+        <span class="section-tag">&lt;HISTORY&gt;</span>
+        <h2 class="section-title">EXPERIENCE</h2>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item reveal-element fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-date">May 2026 - Present</span>
+            <h3 class="timeline-role">Google Student Ambassador</h3>
+            <h4 class="timeline-org">Google</h4>
+            <p class="timeline-desc">
+              Driving tech ecosystem initiatives on campus, sharing generative AI practices, and organizing student developer events.
+            </p>
+            <div class="tech-tags">
+              <span>Google Gemini</span><span>Community Leadership</span><span>AI Tech Workshops</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-element fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-date">June 2026 - July 2026</span>
+            <h3 class="timeline-role">Embedded System Developer Virtual Intern</h3>
+            <h4 class="timeline-org">EduSkills Foundation®</h4>
+            <p class="timeline-desc">
+              Constructed embedded programming modules, integrating sensors and controller logic into automated workflows.
+            </p>
+            <div class="tech-tags">
+              <span>Embedded Systems</span><span>Microcontrollers</span><span>C/C++</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-element fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-date">March 2026 - July 2026</span>
+            <h3 class="timeline-role">Student Ambassador</h3>
+            <h4 class="timeline-org">Naukri Campus</h4>
+            <p class="timeline-desc">
+              Organized technical career growth awareness, helping engineering students navigate recruitment and career readiness programs.
+            </p>
+            <div class="tech-tags">
+              <span>Student Engagement</span><span>Leadership</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-element fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-date">October 2025</span>
+            <h3 class="timeline-role">Open Source Super Contributor</h3>
+            <h4 class="timeline-org">Hacktoberfest 2025</h4>
+            <p class="timeline-desc">
+              Contributed multiple pull requests to open-source code repositories across modern web and developer tooling.
+            </p>
+            <div class="tech-tags">
+              <span>Git</span><span>GitHub</span><span>Open Source</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-element fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-date">August 2025</span>
+            <h3 class="timeline-role">Cyber Job Simulation Participant</h3>
+            <h4 class="timeline-org">Deloitte (via Forage)</h4>
+            <p class="timeline-desc">
+              Completed practical cybersecurity simulations focusing on threat analysis, risk mitigation, and security architecture concepts.
+            </p>
+            <div class="tech-tags">
+              <span>Cybersecurity</span><span>Threat Analysis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-padding default-container">
+      <div class="section-header reveal-element fade-up">
+        <span class="section-tag">&lt;ACADEMICS&gt;</span>
+        <h2 class="section-title">EDUCATION</h2>
+      </div>
+
+      <div class="education-card glass-panel reveal-element fade-up">
+        <div class="edu-header">
+          <div>
+            <h3 class="edu-degree">Bachelor of Technology (B.Tech) - Electronics &amp; Computer Engineering</h3>
+            <h4 class="edu-school">Progressive Education Society's Modern College of Engineering</h4>
+          </div>
+          <span class="edu-duration">2024 - 2028</span>
+        </div>
+        <p class="edu-details">
+          Engaging in embedded systems, AI integration, data structures, and computer engineering principles.
+        </p>
+      </div>
+
+      <div class="education-card glass-panel reveal-element fade-up" style="margin-top: 1.5rem;">
+        <div class="edu-header">
+          <div>
+            <h3 class="edu-degree">Higher Secondary School - Science</h3>
+            <h4 class="edu-school">MAEER'S MIT Junior College, Kothrud, Pune</h4>
+          </div>
+          <span class="edu-duration">2022 - 2024</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section-padding default-container">
+      <div class="section-header reveal-element fade-up">
+        <span class="section-tag">&lt;CERTIFICATIONS&gt;</span>
+        <h2 class="section-title">CERTIFICATIONS &amp; ACHIEVEMENTS</h2>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card glass-panel reveal-element fade-up">
+          <div class="achievement-icon">🤖</div>
+          <div class="achievement-info">
+            <h3>Generative AI Professional &amp; AI Prompt Mastery</h3>
+            <p>Certified in building workflows with generative models and engineering precise agentic prompts.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card glass-panel reveal-element fade-up">
+          <div class="achievement-icon">👔</div>
+          <div class="achievement-info">
+            <h3>McKinsey Forward Program</h3>
+            <p>Completed practical leadership, business communication, and agile strategy training.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card glass-panel reveal-element fade-up">
+          <div class="achievement-icon">🛰️</div>
+          <div class="achievement-info">
+            <h3>Advances in Remote Sensing</h3>
+            <p>Certification in remote sensing techniques applied to spatial and geological analysis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coding Profiles Section -->
+    <section id="coding-profiles" class="section-padding default-container">
+      <div class="section-header reveal-element fade-up">
+        <span class="section-tag">&lt;METRICS&gt;</span>
+        <h2 class="section-title">CODE • BUILD • SOLVE</h2>
+      </div>
+
+      <div class="profiles-grid">
+        <div class="profile-metric-card glass-panel reveal-element fade-up">
+          <h3>GitHub</h3>
+          <p class="metric-val">Active Contributor</p>
+          <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">View Profile</a>
+        </div>
+        <div class="profile-metric-card glass-panel reveal-element fade-up">
+          <h3>LinkedIn</h3>
+          <p class="metric-val">Atharva B</p>
+          <a href="https://www.linkedin.com/in/atharva-b-122844296" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">View Profile</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding default-container">
+      <div class="section-header reveal-element fade-up">
+        <span class="section-tag">&lt;OFFERINGS&gt;</span>
+        <h2 class="section-title">WHAT I DO</h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card glass-panel reveal-element fade-up">
+          <div class="service-border-glow"></div>
+          <div class="service-icon">🤖</div>
+          <h3>AI Agents &amp; Prompt Engineering</h3>
+          <p>Architecting custom agentic automation solutions, fine-tuning system prompts, and integrating generative AI APIs.</p>
+        </div>
+
+        <div class="service-card glass-panel reveal-element fade-up">
+          <div class="service-border-glow"></div>
+          <div class="service-icon">🌐</div>
+          <h3>Full-Stack Web Engineering</h3>
+          <p>Constructing high-performance web applications using robust modern JavaScript, Python backends, and responsive CSS.</p>
+        </div>
+
+        <div class="service-card glass-panel reveal-element fade-up">
+          <div class="service-border-glow"></div>
+          <div class="service-icon">⚡</div>
+          <h3>Embedded Systems &amp; IoT</h3>
+          <p>Programming microcontrollers, hardware sensors, and connecting embedded device networks to edge software models.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding default-container">
+      <div class="section-header reveal-element fade-up">
+        <span class="section-tag">&lt;CONNECT&gt;</span>
+        <h2 class="section-title">LET'S BUILD SOMETHING TOGETHER</h2>
+      </div>
+
+      <div class="contact-card glass-panel reveal-element fade-up">
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="form-name">Name</label>
+            <input type="text" id="form-name" name="name" placeholder="Your Name" required>
+            <span class="form-error" id="error-name">Please enter your name</span>
+          </div>
+
+          <div class="form-group">
+            <label for="form-email">Email</label>
+            <input type="email" id="form-email" name="email" placeholder="atharvababhane@gmail.com" required>
+            <span class="form-error" id="error-email">Please enter a valid email address</span>
+          </div>
+
+          <div class="form-group">
+            <label for="form-subject">Subject</label>
+            <input type="text" id="form-subject" name="subject" placeholder="Subject" required>
+            <span class="form-error" id="error-subject">Please enter a subject</span>
+          </div>
+
+          <div class="form-group">
+            <label for="form-message">Message</label>
+            <textarea id="form-message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+            <span class="form-error" id="error-message">Message must be at least 10 characters</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary magnetic-btn form-submit-btn">
+            <span>SEND MESSAGE</span>
+          </button>
+          
+          <div class="form-status-message" id="form-status"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for Projects -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog">
+    <div class="modal-card glass-panel">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close Modal">&times;</button>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Dynamically injected modal details -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer-block">
+    <div class="default-container footer-content">
+      <p>&copy; 2026 Atharva Babhane. </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
